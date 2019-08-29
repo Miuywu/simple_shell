@@ -1,0 +1,68 @@
+.TH _PRINTF 3 "27 August 2019" "simple_shell Man Page"
+.SH NAME
+.B simple_shell
+- interprets strings in the command line interface.
+.SH SYNOPSIS
+.B interactive mode:
+
+.I ./simple_shell
+
+shell_prompt$
+
+.I command [OPTIONS/ARGUMENTS ...]
+
+shell_prompt$
+
+shell_prompt$ exit
+
+.B non-interactive mode:
+
+.I echo /file/address | ./simple_shell
+
+.I <output of file/address>
+
+shell_prompt$
+
+.I command [OPTIONS/ARGUMENTS ...]
+
+shell_prompt$
+
+shell_prompt$ exit
+
+.SH DESCRIPTION
+Reads strings and determines if the string matches the name of a
+command available, then the type of the command and then executes or
+writes an error message to standard error accordingly.
+.SH RETURN VALUE
+On success, returns EXIT_SUCCESS. On failure, returns EXIT_FAILURE.
+
+.SH EXAMPLE
+To run
+.I ls -l
+in interactive mode
+:
+.PP
+.nf
+.RS
+$ ./simple_shell
+
+shell_prompt$ ls -l
+-rw-rw-r-- 1 vagrant vagrant  110 Aug 27 16:41 AUTHORS
+-rw-rw-r-- 1 vagrant vagrant  358 Aug 27 16:41 exe.c
+-rw-rw-r-- 1 vagrant vagrant  266 Aug 27 16:41 holberton.h
+-rw-rw-r-- 1 vagrant vagrant  826 Aug 27 17:23 README.md
+-rwxrwxr-x 1 vagrant vagrant 9103 Aug 27 16:41 simple_shell
+-rw-rw-r-- 1 vagrant vagrant  518 Aug 27 16:41 tokens.c
+-rw-rw-r-- 1 vagrant vagrant  582 Aug 27 16:41 turtleShell.c
+shell_prompt$
+.RE
+.fi
+.PP
+.SH SEE ALSO
+.IB BASH,
+.IB sh
+.SH BUGS
+No known bugs.
+Report bugs to ...
+.SH AUTHORS
+Minh-Huy Vu, Trevor Stevenson
