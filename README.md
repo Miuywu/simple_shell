@@ -1,16 +1,26 @@
 # Simple Shell
 
-Simple shell is a limited UNIX command line interpreter.
+Simple shell is a limited :/ UNIX command line interpreter.
 
-## Technical Details
+## Compilation/Style
 
 * All files are compiled on Ubuntu 14.04 LTS
 * Programs and functions are compiled with gcc 4.8.4 -Wall -Werror -Wextra -pedantic
-* Code uses the Betty style. It is checked using betty-style.pl and betty-doc.pl
+* Code tried to use the Betty style. It is checked using betty-style.pl and betty-doc.pl
 
 ## Borrowed functions and system calls
 
-* access (man 2 access)
+* strtok()
+* getline()
+* write()
+* signal()
+* isatty()
+* stat()
+* wait()
+* fork()
+* malloc()
+* free()
+* fflush()
 
 ## Examples
 interactive mode:

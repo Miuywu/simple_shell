@@ -1,9 +1,9 @@
 .TH _PRINTF 3 "27 August 2019" "simple_shell Man Page"
 .SH NAME
 .B simple_shell
-- interprets strings in the command line interface.
-.SH SYNOPSIS
-.B interactive mode:
+- Interprets strings given to it in the command line interface.
+.SH SYNOPSIS/USAGE
+.B interactive mode(manually entering in commands after shell prompt):
 
 .I ./simple_shell
 
@@ -15,7 +15,7 @@ shell_prompt$
 
 shell_prompt$ exit
 
-.B non-interactive mode:
+.B non-interactive mode(piping text into the program):
 
 .I echo /file/address | ./simple_shell
 
