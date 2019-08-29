@@ -27,6 +27,10 @@ int main(int ac, char **av, char **env)
 		if (isatty(STDIN_FILENO) == 0)
 			if (inCheck == -1 || inCheck == EOF)
 				exit(EXIT_FAILURE);
+		if (_strcmp(line, "exit") == 0)
+			exit(0);
+		if (_strcmp(line, "env") == 0)
+			pEnv(env);
 		if (inCheck != -1)
 		{
 			toks = ListToken(line);

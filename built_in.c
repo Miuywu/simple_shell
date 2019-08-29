@@ -6,11 +6,12 @@
  */
 int pEnv(char **env)
 {
+	char **envcopy = env;
 	int count = 0;
 
-	while (env[count])
+	while (envcopy[count])
 	{
-		write(STDOUT_FILENO, env[count], _strlen(env[count]));
+		write(STDOUT_FILENO, envcopy[count], _strlen(envcopy[count]));
 		write(STDOUT_FILENO, "\n", 1);
 		count++;
 	}
