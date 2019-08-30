@@ -8,7 +8,6 @@ char *pathFinder(char **env)
 {
 	int a;
 	char *pathcopy;
-	char *path;
 
 	for (a = 0; env[a]; a++)
 	{
