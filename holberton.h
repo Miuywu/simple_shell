@@ -11,6 +11,12 @@
 #include <sys/stat.h>
 #include <sys/wait.h>
 
+typedef struct varholder
+{
+	int exitstat;
+}varholder;
+
+int spacer(char *);
 void signal_read(int);
 char *_strcat(char *dest, char *src);
 char *pathAppend(char *, char *);
@@ -20,7 +26,7 @@ int pEnv(char **);
 int _strlen(char *);
 int _strcmp(char *, char *);
 char **ListToken(char *);
-int exe(char **);
+int exe(char *, char **, struct varholder *);
 char *_strdup(char *str);
 
 #endif

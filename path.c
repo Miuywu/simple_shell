@@ -12,12 +12,12 @@ char *pathFinder(char **env)
 
 	for (a = 0; env[a]; a++)
 	{
-		if (_strcmp(env[a], "PATH") == 0)
+		if (_strcmp(env[a], "PATH") == 0 && env[a][4] == '=')
 		{
-			pathcopy = _strdup(env[a]);
-			path = strtok(pathcopy, "=");
-			path = strtok(NULL, "=");
-			return (path);
+			pathcopy = &env[a][5];
+		/*path = strtok(pathcopy, "=");
+			path = strtok(NULL, "=");*/
+			return (pathcopy);
 
 		}
 	}
@@ -35,8 +35,6 @@ char *pathAppend(char *path, char *cmd)
 	struct stat st;
 	char *pathcopy = _strdup(path);
 
-	/*	if (!list)
-		exit(1);*/
 	tok = strtok(pathcopy, ":");
 	while(tok)
 	{
@@ -46,10 +44,13 @@ char *pathAppend(char *path, char *cmd)
 		_strcat(list, cmd);
 
 		if (stat(list, &st) == 0)
+		{
+			free(pathcopy);
 			return (list);
-
+		}
+		free(list);
 		tok = strtok(NULL, ":");
-	/*	free(list);*/
 	}
+	free(pathcopy);
 	return (NULL);
 }

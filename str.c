@@ -2,6 +2,19 @@
 #include "holberton.h"
 
 /**
+ * spacer - moves pointer of line to first non space
+ * @line: input line
+ * Return: number of spaces
+ */
+int spacer(char *line)
+{
+	int a;
+
+	for (a = 0; line[a] == ' '; a++)
+		;
+	return (a);
+}
+/**
  * _strcat - concat 2 strs
  *
  * Return: null

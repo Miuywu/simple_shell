@@ -14,6 +14,7 @@ int main(int ac, char **av, char **env)
 	char **toks = NULL;
 	char *fullpath = NULL;
 	struct varholder holder;
+	int spaces = 0;
 
 	(void) ac;
 	(void) av;
@@ -25,6 +26,8 @@ int main(int ac, char **av, char **env)
 		if (isatty(STDIN_FILENO) == 1)
 			write(STDOUT_FILENO, "Tshell$ ", 8);
 		inCheck = getline(&line, &len, stdin);/* getline */
+		spaces = spacer(line);
+		line += spaces;
 		if (isatty(STDIN_FILENO) == 1)
 			if (inCheck == -1)
 			{

@@ -19,5 +19,6 @@ char **ListToken(char *input)
 		list[i] = tok;
 		tok = strtok(NULL, " \t\n");
 	}
+	list[i] = NULL;
 	return (list);
 }
