@@ -1,11 +1,16 @@
 # Simple Shell
 
-Simple shell is a limited :/ UNIX command line interpreter.
+Simple shell is a limited UNIX command line interpreter.
+
+Program Flow:
+``` main.c -> _strdup.c -> tokens.c -> path.c -> exe.c -> main.c ```
 
 ## Compilation/Style
 
 * All files are compiled on Ubuntu 14.04 LTS
 * Programs and functions are compiled with gcc 4.8.4 -Wall -Werror -Wextra -pedantic
+```$ gcc 4.8.4 -Wall -Werror -Wextra -pedantic *.c 
+```
 * Code tried to use the Betty style. It is checked using betty-style.pl and betty-doc.pl
 
 ## Borrowed functions and system calls
@@ -58,7 +63,6 @@ $ cat AUTHORS
 The creators of the project are:
 
 Minh-Huy Vu <trulymhvu@gmail.com>
-Trevor Stevenson <tstevenson026@gmail.com>
 $
 $ cat ls_script | ./simple_shell
 AUTHORS exe.c holberton.h README.md simple_shell tokens.c turtleShell.c
