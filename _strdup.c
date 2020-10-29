@@ -5,7 +5,7 @@
 * Return: copy of the string given as a parameter
 * @str: input
 *
-	*/
+*/
 char *_strdup(char *str)
 {
 	char *array; /*pointer to copy of str*/
