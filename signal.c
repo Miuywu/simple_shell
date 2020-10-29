@@ -4,6 +4,7 @@
  * @out: sig
  * Return: void
  */
+
 void signal_read(int out)
 {
         (void) out;
