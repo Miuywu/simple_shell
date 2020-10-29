@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include "holberton.h"
-
 /**
  * spacer - moves pointer of line to first non space
  * @line: input line
