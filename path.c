@@ -4,6 +4,7 @@
  * @env: array of enviroment vars
  * Return: pointer to copy of path
  */
+
 char *pathFinder(char **env)
 {
 	int a;
