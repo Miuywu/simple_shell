@@ -4,7 +4,6 @@
  * @input: string given by main
  * Return: pointer to array of tokens
  */
-
 char **ListToken(char *input)
 {
 	char *tok, **list;
